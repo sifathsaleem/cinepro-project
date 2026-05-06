@@ -3,7 +3,7 @@ import { createContext, useState, useEffect } from "react";
 const MovieTheme = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const theme = JSON.parse(localStorage.getItem("theme")) || false;
+  const theme = JSON.parse(localStorage.getItem("theme")) || true;
   const [isDark, setDark] = useState(theme);
 
   const toggleTheme = () => {
