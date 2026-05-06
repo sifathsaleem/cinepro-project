@@ -1,8 +1,8 @@
 const DetailsSkeleton = () => {
   return (
-    <div className="h-full w-full flex bg-gray-100 dark:bg-gray-800 p-4 rounded-xl">
-      <div className="flex flex-1 gap-20 animate-pulse">
-        <div className="w-[366px] h-full flex justify-center items-center bg-gray-300 dark:bg-gray-600 rounded-xl animate-pulse">
+    <div className="h-[90vh] w-full max-w-lg md:max-w-none mx-auto flex bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden">
+      <div className="flex flex-1 flex-col md:flex-row h-full md:gap-10 animate-pulse">
+        <div className="w-full md:w-[366px] h-[50%] md:h-full flex justify-center items-center bg-gray-300 dark:bg-gray-600 animate-pulse">
           <svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-18 text-gray-400">
             <path
               strokeLinecap="round"
@@ -12,22 +12,21 @@ const DetailsSkeleton = () => {
           </svg>
         </div>
 
-        <div className="flex-1 self-center">
+        <div className="flex-1 md:self-center p-4">
           <div className="h-10 mb-5 w-3/4 bg-gray-300 dark:bg-gray-600 rounded"></div>
 
-          <div className="h-7 w-10/12 mb-5 bg-gray-300 dark:bg-gray-600 rounded"></div>
+          <div className="h-5 w-1/2 mb-3 w-1/4 md:hidden bg-gray-300 dark:bg-gray-600 rounded"></div>
+          <div className="h-5 w-1/2 mb-5 bg-gray-300 dark:bg-gray-600 rounded"></div>
 
           <div className="h-4 mb-1 bg-gray-300 dark:bg-gray-600 rounded"></div>
           <div className="h-4 mb-1 w-[90%] bg-gray-300 dark:bg-gray-600 rounded"></div>
           <div className="h-4 mb-1 w-[95%] bg-gray-300 dark:bg-gray-600 rounded"></div>
           <div className="h-4 mb-10 w-[85%] bg-gray-300 dark:bg-gray-600 rounded"></div>
 
-          <div className="flex gap-x-6">
-          <div className="h-12 w-44 bg-gray-300 dark:bg-gray-600 rounded"></div>
-          <div className="h-12 w-36 bg-gray-300 dark:bg-gray-600 rounded"></div>
-
+          <div className="hidden md:flex gap-x-6">
+            <div className="h-10 w-40 bg-gray-300 dark:bg-gray-600 rounded"></div>
+            <div className="h-10 w-32 bg-gray-300 dark:bg-gray-600 rounded"></div>
           </div>
-
         </div>
       </div>
     </div>

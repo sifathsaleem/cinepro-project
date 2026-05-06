@@ -4,14 +4,16 @@ import { FaMoon, FaSun } from "react-icons/fa6";
 import { TbMoonFilled, TbMoonOff } from "react-icons/tb";
 import { IoSunny } from "react-icons/io5";
 import MovieTheme from "../context/MovieTheme";
-import DarkLogo from "../assets/logo_dark.png"
-import LightLogo from "../assets/logo_light.png"
+import DarkLogo from "../assets/logo_dark.png";
+import LightLogo from "../assets/logo_light.png";
 
 const Header = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("works");
+    
     const queryTerm = e.target.search.value;
     e.target.reset();
     navigate(`/search?q=${queryTerm}`);
@@ -96,11 +98,14 @@ const Header = () => {
                   <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
                 </svg>
               </div>
-              <input
-                type="text"
-                placeholder="Search"
-                className="block w-full ps-9 pe-3 py-2 bg-gray-100 dark:bg-gray-950 border border-gray-700 text-black dark:text-slate-100 text-sm rounded-lg placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="block w-full ps-9 pe-3 py-2 bg-gray-100 dark:bg-gray-950 border border-gray-700 text-black dark:text-slate-100 text-sm rounded-lg placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  name="search"
+                />
+              </form>
             </div>
 
             {/* <ul className="flex flex-col font-medium">

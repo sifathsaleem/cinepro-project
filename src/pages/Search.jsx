@@ -16,12 +16,12 @@ const Search = ({ apiPath, title }) => {
   const dummy = new Array(6).fill(0);
 
   return (
-    <main className="">
+    <main>
       <section>
         <p className="text-3xl text-black dark:text-slate-100 mb-5">{loading || movies.length > 0 ? `Results For (${queryTerm})` : `No results Found For (${queryTerm})`}</p>
       </section>
       <section>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{loading ? dummy.map((_, i) => <Skeleton key={i} />) : movies.map((movie) => <Card key={movie.id} movie={movie} />)}</div>
+        <div className="grid gap-5 justify-center sm:grid-cols-2 lg:grid-cols-3">{loading ? dummy.map((_, i) => <Skeleton key={i} />) : movies.map((movie) => <Card key={movie.id} movie={movie} />)}</div>
       </section>
     </main>
   );
