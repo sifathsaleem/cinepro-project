@@ -33,7 +33,7 @@ const MovieDetails = () => {
           <img src={backdropImg} alt="" className="absolute hidden md:inline-block inset-0 w-full h-full md:blur" />
           <div className="bg-black/50 absolute hidden md:block inset-0"></div>
           <div className="w-full h-[50%] md:h-full md:flex-1 overflow-hidden flex relative">
-            <img src={posterImg} alt="" className="w-full object-center center object-cover" />
+            <img src={posterImg} alt="" className="w-full object-top object-cover" />
             <Link to="/" className="absolute bg-gray-500/50 backdrop-blur-sm p-3 rounded-full top-5 left-5">
               <FaArrowLeft />
             </Link>

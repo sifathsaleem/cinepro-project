@@ -21,8 +21,6 @@ const Header = () => {
   const { isDark, toggleTheme } = useContext(MovieTheme);
   const [isOpen, setIsOpen] = useState(false);
   const activeClass = "text-blue-500 hover:text-blue-400 transition-colors";
-  const activeClassMob = "block px-3 py-2.5 text-blue-500 rounded-lg hover:bg-gray-800 transition-colors";
-  const inActiveClassMob = "block px-3 py-2.5 text-black rounded-lg hover:bg-gray-800 hover:text-blue-400 transition-colors";
   const inActiveClass = "hover:text-blue-400 transition-colors";
   return (
     <header className="sticky top-0 z-50">
