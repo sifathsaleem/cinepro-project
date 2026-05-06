@@ -25,7 +25,7 @@ const Header = () => {
   const inActiveClassMob = "block px-3 py-2.5 text-black rounded-lg hover:bg-gray-800 hover:text-blue-400 transition-colors";
   const inActiveClass = "hover:text-blue-400 transition-colors";
   return (
-    <header>
+    <header className="sticky top-0 z-50">
       <nav className="bg-white dark:bg-gray-800 text-black dark:text-slate-100 w-full shadow-gray-700 z-20">
         <div className="max-w-7xl flex items-center justify-between mx-auto px-4 py-3 gap-6">
           <NavLink to="/" className="flex items-center gap-2 shrink-0">
@@ -92,7 +92,29 @@ const Header = () => {
         {isOpen && (
           <div className="bg-gray-100 dark:bg-gray-800 border-t border-gray-700 px-4 py-3 md:hidden">
             {/* Mobile Search */}
-            <div className="relative mb-3">
+            <ul className="font-medium flex flex-col items-center">
+              <li className="p-2" onClick={() => setIsOpen(!isOpen)}>
+                <NavLink to="/" className={({ isActive }) => (isActive ? activeClass : inActiveClass)}>
+                  Home
+                </NavLink>
+              </li>
+              <li className="p-2" onClick={() => setIsOpen(!isOpen)}>
+                <NavLink to="/movies/popular" className={({ isActive }) => (isActive ? activeClass : inActiveClass)}>
+                  Popular
+                </NavLink>
+              </li>
+              <li className="p-2" onClick={() => setIsOpen(!isOpen)}>
+                <NavLink to="/movies/top" className={({ isActive }) => (isActive ? activeClass : inActiveClass)}>
+                  Top
+                </NavLink>
+              </li>
+              <li className="p-2 mb-2" onClick={() => setIsOpen(!isOpen)}>
+                <NavLink to="/movies/upcoming" className={({ isActive }) => (isActive ? activeClass : inActiveClass)}>
+                  Upcoming
+                </NavLink>
+              </li>
+            </ul>
+            <div className="relative mb-3" onClick={() => setIsOpen(!isOpen)}>
               <div className="absolute inset-y-0 inset-s-0 flex items-center ps-3 pointer-events-none">
                 <svg className="w-4 h-4 text-slate-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
