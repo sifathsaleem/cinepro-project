@@ -9,10 +9,10 @@ const MovieList = ({ apiPath, title }) => {
   useTitle(title);
 
   const movies = data?.results || [];
-  const dummy = new Array(6).fill(0);
+  const dummy = new Array(20).fill(0);
 
   return (
-    <main className="grid gap-5 justify-items-center sm:grid-cols-2 lg:grid-cols-3">
+    <main className="grid gap-5 justify-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {loading ? dummy.map((_, i) => <Skeleton key={i} />) : movies.map((movie) => <Card key={movie.id} movie={movie} />)}
     </main>
   );

@@ -2,7 +2,7 @@ const Skeleton = () => {
   return (
     <div className="rounded-xl max-w-sm w-full overflow-hidden">
       <div className=" flex flex-col">
-        <div className="bg-gray-300 dark:bg-gray-600 h-[562px] flex justify-center items-center">
+        <div className="bg-gray-300 h-[350px] dark:bg-gray-600 flex justify-center items-center">
           <svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-15 text-gray-400 animate-pulse">
             <path
               strokeLinecap="round"
