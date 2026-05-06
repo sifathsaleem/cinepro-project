@@ -13,10 +13,10 @@ const Card = ({ movie }) => {
 
   return (
     <Link to={`/movie/${id}`} className="flex max-w-sm w-full flex-1 transition-transform">
-      <div className="bg-neutral-100 dark:bg-gray-800 text-slate-800 dark:text-slate-100 drop-shadow rounded-xl flex flex-col hover:scale-102 transition-all duration-300">
+      <div className="bg-neutral-100 dark:bg-gray-800 flex-1 text-slate-800 dark:text-slate-100 drop-shadow rounded-xl flex flex-col hover:scale-102 transition-all duration-300">
         {/* <img className="rounded-t-md z-10 block" src={image} alt="" /> */}
         <div className="h-[562px] w-full rounded-t-xl bg-black bg-cover  bg-center" style={{ backgroundImage: `url(${image})` }}></div>
-        <div className="p-5 flex-1 font-light">
+        <div className="p-5 flex-1font-light">
           <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading">{original_title}</h5>
           <div className="text-slate-800 dark:text-slate-300  text-sm flex items-center gap-x-3 mb-3">
             <span className="flex items-center gap-x-1 ">
