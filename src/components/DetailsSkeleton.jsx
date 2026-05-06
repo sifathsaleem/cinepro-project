@@ -1,6 +1,6 @@
 const DetailsSkeleton = () => {
   return (
-    <div className="h-[90vh] w-full max-w-lg md:max-w-none mx-auto flex bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden">
+    <div className="h-[80vh] w-full max-w-lg md:max-w-none mx-auto flex bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden">
       <div className="flex flex-1 flex-col md:flex-row h-full md:gap-10 animate-pulse">
         <div className="w-full md:w-[366px] h-[50%] md:h-full flex justify-center items-center bg-gray-300 dark:bg-gray-600 animate-pulse">
           <svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-18 text-gray-400">

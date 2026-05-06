@@ -29,7 +29,7 @@ const MovieDetails = () => {
       {loading ? (
         <DetailsSkeleton />
       ) : (
-        <div className="flex flex-col md:flex-row md:gap-x-5 w-full overflow-hidden mx-auto max-w-lg md:max-w-none rounded-xl h-[90vh] items-center text-white relative">
+        <div className="flex flex-col md:flex-row md:gap-x-5 w-full overflow-hidden mx-auto max-w-lg md:max-w-none rounded-xl h-[80vh] items-center text-white relative">
           <img src={backdropImg} alt="" className="absolute hidden md:inline-block inset-0 w-full h-full md:blur" />
           <div className="bg-black/50 absolute hidden md:block inset-0"></div>
           <div className="w-full h-[50%] md:h-full md:flex-1 overflow-hidden flex relative">
