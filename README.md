@@ -26,7 +26,9 @@ Users should be able to:
 
 ### Screenshot
 
-![CinePro Screenshot](./screenshot.png)
+![CinePro Screenshot](./src/assets/cinepro1.PNG)
+![CinePro Screenshot](./src/assets/cinepro2.PNG)
+![CinePro Screenshot](./src/assets/cinepro3.PNG)
 
 ### Links
 
