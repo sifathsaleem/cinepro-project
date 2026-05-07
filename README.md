@@ -43,7 +43,7 @@ Users should be able to:
 - React Router for page navigation
 - Custom hooks for data fetching
 - TMDB API for live movie data
-- CSS for styling and theming
+- Tailwind for styling and theming
 - Skeleton loading for smooth UX
 - Netlify for deployment
 
