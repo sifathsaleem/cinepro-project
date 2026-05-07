@@ -1,13 +1,18 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import posterBackup from "../assets/poster_backup.jpg";
 import useTitle from "../hooks/useTitle";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DetailsSkeleton from "../components/DetailsSkeleton";
 import { FaStar, FaPlay, FaArrowLeft } from "react-icons/fa";
 
 const MovieDetails = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   const id = useParams().id;
+  const navigate = useNavigate();
   const { data, loading } = useFetch(`movie/${id}`);
   console.log(data);
   const { original_title, backdrop_path, poster_path, overview, release_date, genres, vote_average, vote_count, runtime } = data;
@@ -34,18 +39,9 @@ const MovieDetails = () => {
           <div className="bg-black/50 absolute hidden md:block inset-0"></div>
           <div className="w-full h-[50%] md:h-full md:flex-1 overflow-hidden flex relative">
             <img src={posterImg} alt="" className="w-full object-top object-cover" />
-            <Link to="/" className="absolute bg-gray-500/50 backdrop-blur-sm p-3 rounded-full top-5 left-5">
+            <button onClick={() => navigate(-1)} className="absolute bg-gray-500/50 backdrop-blur-sm p-3 rounded-full top-5 left-5">
               <FaArrowLeft />
-            </Link>
-            <div className="flex text-sm md:hidden whitespace-nowrap order-2 absolute left-1/2 -translate-x-1/2 bottom-4 justify-center gap-x-5">
-              <button type="button" className="px-7 py-2 uppercase flex items-center  gap-x-2 font-normal bg-gray-400/40 backdrop-blur-sm rounded-md hover:bg-gray-400/30 cursor-pointer">
-                <FaPlay size={12} />
-                Play Now
-              </button>
-              <button type="button" className="px-8 py-2 font-normal uppercase block bg-blue-600 rounded-md hover:bg-blue-700 cursor-pointer">
-                Trailer
-              </button>
-            </div>
+            </button>
           </div>
 
           <div className="bg-neutral-100 dark:bg-gray-800 md:bg-transparent md:dark:bg-transparent md:z-10 flex-1 md:flex-2 text-slate-800 md:text-slate-100 dark:text-slate-100 flex flex-col p-4">
@@ -72,15 +68,6 @@ const MovieDetails = () => {
               </div>
             </div>
             <span className="block text-sm md:text-base font-light mb-3 md:mb-10">{overview}</span>
-            <div className="hidden md:flex text-sm md:text-base whitespace-nowrap order-4 bottom-4 justify-center md:justify-start gap-x-5">
-              <button type="button" className="px-7 py-2 uppercase flex items-center  gap-x-2 font-normal bg-gray-400/40 backdrop-blur-sm rounded-md hover:bg-gray-400/30 cursor-pointer">
-                <FaPlay size={12} />
-                Play Now
-              </button>
-              <button type="button" className="px-8 py-2 font-normal uppercase block bg-blue-600 rounded-md hover:bg-blue-700 cursor-pointer">
-                Trailer
-              </button>
-            </div>
           </div>
         </div>
       )}

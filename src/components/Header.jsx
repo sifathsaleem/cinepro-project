@@ -12,7 +12,6 @@ const Header = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("works");
     
     const queryTerm = e.target.search.value;
     e.target.reset();

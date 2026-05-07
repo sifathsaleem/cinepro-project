@@ -21,12 +21,7 @@ const DetailsSkeleton = () => {
           <div className="h-4 mb-1 bg-gray-300 dark:bg-gray-600 rounded"></div>
           <div className="h-4 mb-1 w-[90%] bg-gray-300 dark:bg-gray-600 rounded"></div>
           <div className="h-4 mb-1 w-[95%] bg-gray-300 dark:bg-gray-600 rounded"></div>
-          <div className="h-4 mb-10 w-[85%] bg-gray-300 dark:bg-gray-600 rounded"></div>
-
-          <div className="hidden md:flex gap-x-6">
-            <div className="h-10 w-40 bg-gray-300 dark:bg-gray-600 rounded"></div>
-            <div className="h-10 w-32 bg-gray-300 dark:bg-gray-600 rounded"></div>
-          </div>
+          <div className="h-4 w-[85%] bg-gray-300 dark:bg-gray-600 rounded"></div>
         </div>
       </div>
     </div>

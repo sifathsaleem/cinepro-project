@@ -5,11 +5,11 @@ import MovieTheme from "../context/MovieTheme";
 import { FaStar } from "react-icons/fa";
 
 const Card = ({ movie }) => {
-  console.log(movie)
+  console.log(movie);
   const { id, overview, original_title, poster_path, release_date, vote_average } = movie;
   const image = poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : posterBackup;
-  const {isDark} = useContext(MovieTheme)
-  const year = release_date.split("-")[0]
+  const { isDark } = useContext(MovieTheme);
+  const year = release_date.split("-")[0];
 
   return (
     <Link to={`/movie/${id}`} className="flex max-w-sm w-full flex-1 transition-transform">
