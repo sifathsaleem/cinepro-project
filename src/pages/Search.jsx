@@ -13,7 +13,7 @@ const Search = ({ apiPath, title }) => {
   useTitle(`${title} ${queryTerm}`);
 
   const movies = data?.results || [];
-  const dummy = new Array(6).fill(0);
+  const dummy = new Array(20).fill(0);
 
   return (
     <main>
