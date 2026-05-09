@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: **https://cineproz.netlify.app/**
+- Live Site URL: **https://cinepro-slm.netlify.app/**
 - GitHub Repository: **https://github.com/sifathsaleem/cinepro-project**
 
 ---
