@@ -1,7 +1,6 @@
 import { useState, useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { FaMoon, FaSun } from "react-icons/fa6";
-import { TbMoonFilled, TbMoonOff } from "react-icons/tb";
+import { FaMoon } from "react-icons/fa6";
 import { IoSunny } from "react-icons/io5";
 import MovieTheme from "../context/MovieTheme";
 import DarkLogo from "../assets/logo_dark.png";
