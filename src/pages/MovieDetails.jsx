@@ -39,7 +39,7 @@ const MovieDetails = () => {
           <div className="bg-black/50 absolute hidden md:block inset-0"></div>
           <div className="w-full h-[50%] md:h-full md:flex-1 overflow-hidden flex relative">
             <img src={posterImg} alt="" className="w-full object-top object-cover" />
-            <button onClick={() => navigate(-1)} className="absolute bg-gray-500/50 backdrop-blur-sm p-3 rounded-full top-5 left-5">
+            <button onClick={() => navigate(-1)} className="absolute bg-gray-500/50 backdrop-blur-sm p-3 rounded-full top-5 left-5 hover:cursor-pointer">
               <FaArrowLeft />
             </button>
           </div>
