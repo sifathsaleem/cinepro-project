@@ -5,6 +5,7 @@ import { IoSunny } from "react-icons/io5";
 import MovieTheme from "../context/MovieTheme";
 import DarkLogo from "../assets/logo_dark.png";
 import LightLogo from "../assets/logo_light.png";
+import UIContext from "../context/UIContext";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -18,11 +19,12 @@ const Header = () => {
     navigate(`/search?q=${queryTerm}`);
   };
   const { isDark, toggleTheme } = useContext(MovieTheme);
+  const { isVideoOpen, setIsVideoOpen } = useContext(UIContext)
   const [isOpen, setIsOpen] = useState(false);
   const activeClass = "text-blue-500 hover:text-blue-400 transition-colors";
   const inActiveClass = "hover:text-blue-400 transition-colors";
   return (
-    <header className="sticky top-0 z-50">
+    <header className={`${isVideoOpen ? "hidden" : "sticky top-0 z-50"}`}>
       <nav className="bg-white dark:bg-gray-800 text-black dark:text-slate-100 w-full shadow-gray-700 z-20">
         <div className="max-w-7xl flex items-center justify-between mx-auto px-4 py-3 gap-6">
           <NavLink to="/" className="flex items-center gap-2 shrink-0">

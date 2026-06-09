@@ -5,7 +5,6 @@ import MovieTheme from "../context/MovieTheme";
 import { FaStar } from "react-icons/fa";
 
 const Card = ({ movie }) => {
-  console.log(movie);
   const { id, overview, original_title, poster_path, release_date, vote_average } = movie;
   const image = poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : posterBackup;
   const { isDark } = useContext(MovieTheme);
