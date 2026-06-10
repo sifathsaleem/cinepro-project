@@ -67,14 +67,16 @@ const MovieDetails = () => {
               <button onClick={() => navigate(-1)} className="absolute bg-gray-500/50 backdrop-blur-sm p-3 rounded-full top-5 left-5 hover:cursor-pointer">
                 <FaArrowLeft />
               </button>
-              <button className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 backdrop-blur-md rounded-full md:hidden">
-                <FaCirclePlay
-                  onClick={() => {
-                    if (trailerKey) setIsVideoOpen(true);
-                  }}
-                  size={48}
-                />
-              </button>
+              {trailerKey && (
+                <button className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 backdrop-blur-md rounded-full md:hidden">
+                  <FaCirclePlay
+                    onClick={() => {
+                      if (trailerKey) setIsVideoOpen(true);
+                    }}
+                    size={48}
+                  />
+                </button>
+              )}
             </div>
 
             <div className="bg-neutral-100 dark:bg-gray-800 md:bg-transparent md:dark:bg-transparent flex-1 md:flex-2 text-slate-800 md:text-slate-100 dark:text-slate-100 flex flex-col p-4 z-10">
